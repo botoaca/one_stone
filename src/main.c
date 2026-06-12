@@ -119,8 +119,6 @@ int main(int argc, char** argv) {
         return 1;
     }
 
-    // FILE* templates[TEMPLATE_COUNT];
-    // for (int i = 0; i < TEMPLATE_COUNT; i++) templates[i] = fopen(template_filenames[i], "r");
     FILE* final_webpage = fopen("wasteland.html", "w");
     if (!final_webpage) return 1;
 
@@ -139,15 +137,7 @@ int main(int argc, char** argv) {
     append(final_webpage, template_filenames[FOOTER]);
     // ---
 
-
-    // for (int i = 0; i < TEMPLATE_COUNT; i++) fclose(templates[i]);
     fclose(final_webpage);
-
-    // for (size_t i = 0; i < tweet_count; i++)
-    // {
-    //     printf("%zu: %s = %s\n", i, tweets[i].id, tweets[i].full_text);
-    // }
-
     free_TweetData_array(tweets, tweet_count);
 
     return 0;
