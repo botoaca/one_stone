@@ -1,0 +1,1 @@
+gcc src/main.c src/tweet_parser.c -Iinclude -lcjson -Wall -Wextra -o one_stone.exe
